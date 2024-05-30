@@ -6,17 +6,25 @@
     <title>DCPN | Civil Process & Notary</title>
     <link href="./newstyle.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./public/img/logo/B-02.png">
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
       main *{
         display: block;
+        font-family: Poppins;
+      }
+      footer *{
+        font-family: Poppins;
       }
     </style>
   </head>
 <body>
-    
     <nav class="bg-white">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div class="relative flex h-16 items-center justify-between">
@@ -31,16 +39,26 @@
                 </svg>
               </button>
             </div>
-            <div class="flex flex-1 items-center justify-center sm:items-center sm:justify-start">
-              <div class="flex flex-shrink-0 items-center">
-                <img class="h-6 lg:h-8 w-auto" src="./public/img/logo/dcpn-logo2.png" alt="Your Company">
+            <div class="flex flex-1 items-center justify-center sm:items-center sm:justify-between">
+              <div class="flex items-center">
+                <div class="flex flex-shrink-0 items-center">
+                  <img class="h-6 lg:h-8 w-auto" src="./public/img/logo/dcpn-logo2.png" alt="Your Company">
+                </div>
+                <div class="sm:ml-6 hidden sm:block">
+                  <div class="flex space-x-5">
+                      <a href="#" class="bg-dcpn text-white rounded-md px-4 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+                      <a href="#" class="text-red-800 hover:bg-dcpn hover:text-white rounded-md px-4 py-2 text-sm font-medium">Team</a>
+                      <a href="#" class="text-red-700 hover:bg-dcpn hover:text-white rounded-md px-4 py-2 text-sm font-medium">Projects</a>
+                      <a href="#" class="text-red-700 hover:bg-dcpn hover:text-white rounded-md px-4 py-2 text-sm font-medium">Calendar</a>
+                  </div>
+                </div>
               </div>
-              <div class="sm:ml-6 hidden sm:block">
-                <div class="flex space-x-4">
-                  <a href="#" class="bg-dcpn text-white rounded-md px-4 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
-                  <a href="#" class="text-red-800 hover:bg-dcpn hover:text-white rounded-md px-4 py-2 text-sm font-medium">Team</a>
-                  <a href="#" class="text-red-700 hover:bg-dcpn hover:text-white rounded-md px-4 py-2 text-sm font-medium">Projects</a>
-                  <a href="#" class="text-red-700 hover:bg-dcpn hover:text-white rounded-md px-4 py-2 text-sm font-medium">Calendar</a>
+              <div class="md:block hidden items-center">
+                <div class="flex items-center">
+                  <div class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                  </svg></div>
+                  <p class="font-medium">(469) 406-6807</p>
                 </div>
               </div>
             </div>
@@ -76,16 +94,16 @@
             </div>
         </section>
 
-        <section class="bg-dcpn p-4 md:p-6 lg:p-10 xl:p-14 xl:px-16">
+        <section class="bg-dcpn p-4 md:p-6 lg:p-10 xl:p-16 xl:px-16">
           <div class="text-start tracking-widest flex flex-col items-start mt-5"> 
-            <div class="flex items-center pb-3 flex-col sm:flex-row">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-red-600 size-5">
+            <div class="flex items-center pb-3 flex-row">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-red-600 size-4 sm:size-5">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
             </svg>
-              <p class="text-red-600 text-start text-sm font-semibold font-['Poppins'] pl-2">And What We Do Best In The Field</p> 
+              <p class="text-red-600 text-start text-xs sm:text-sm font-semibold font-['Poppins'] pl-2">And What We Do Best In The Field</p> 
             </div>
             <!-- ---------------------------- -->
-            <p class="text-white font-normal md:font-medium text-base" style="text-align: start;">When a larger company or entity is involved in a lawsuit, many turn to CT Corporation. It is the largest registered agent service firm in the world. 
+            <p class="text-white font-normal text-sm md:text-lg" style="text-align: start;">When a larger company or entity is involved in a lawsuit, many turn to CT Corporation. It is the largest registered agent service firm in the world. 
               Thousands of Texas companies are represented by CT Corporation, therefore serving these agencies are a common occurrence. When these agents need to be served, it’s important to hire a knowledgeable and professional Texas process server.
               We offer competitive CT Corporation serve rates. Our team is equipped with the skillset and experience to serve these agents in an accurate and timely manner. We are certified by the Texas JBCC and are able to serve all registered agents designated by CT Corporation. Contact us today to discuss your CT Corporation needs throughout Dallas and beyond.
               </p>
@@ -95,51 +113,91 @@
         <section class="p-4 md:p-8 lg:p-12 xl:p-16 bg-dcpn flex items-center justify-center">
           <div class="w-full grid grid-cols-2">
             <div class="bg-slate-200 bg-no-repeat bg-center bg-cover bg-fixed" style="background-image: url('./public/img/bg/documents_bg.jpg');"></div>
-            <div class="grid grid-cols-1 divide-y divide-dotted text-white">
+            <div class="grid grid-rows-1 md:grid-cols-1 divide-y divide-dotted text-white">
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Service Area</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Service Area</h3>
+                </div>
                 <p>
                   Although we specialize in providing process service throughout Allen, Texas and Dallas, Texas we serve nationwide! Our team has developed relationships with reliable servers across the country that share the same values as Dallas Civil Process & Notary.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Our Approach</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Our Approach</h3>
+                </div>
                 <p>
                   Dallas Civil Process & Notary is built on the foundation of putting the client first. Our team understands the importance of getting documents served promptly and accurately. Our Allen, Texas process servers are communicative with our clients every step of the way.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Diligent Service</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Diligent Service</h3>
+                </div>
                 <p>
                   Our company prides itself on being diligent in all service of process. We will go the extra mile to make sure that we get the document served as quickly as possible. Let our reliable Texas process servers get the job done right the first time.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Who We Serve</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Who We Serve</h3>
+                </div>
                 <p>
                   Dallas Civil Process & Notary serves anyone in need of our services. From individuals (pro se) handling their cases on their own, to nationwide law firms and everything in between. We will treat your documents as if they were our own.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Routine Service</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Routine Service</h3>
+                </div>
                 <p>
                   Routine Service means the document will be attempted within two days of receiving the paper. Some other companies wait on non-rush serves. We'll complete your serve quickly, so your legal case can proceed.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Witness Fee Advance</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Witness Fee Advance</h3>
+                </div>
                 <p>
                   Our company prides itself on being diligent in all service of process. We will go the extra mile to make sure that we get the document served as quickly as possible. Let our reliable Texas process servers get the job done right the first time.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">Rush Service</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">Rush Service</h3>
+                </div>
                 <p>
                   Our company offers rush service at all times. Many times we can make the first attempt within an hour of receiving the papers. Please note that rush services are an additional fee.
                 </p>
               </div>
               <div class="p-7">
-                <h3 class="text-xl font-medium text-red-700">HD Video/Audio Recording</h3>
+                <div class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 pr-2 text-red-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9" />
+                  </svg>
+                  <h3 class="text-xl font-medium text-red-700">HD Video/Audio Recording</h3>
+                </div>
                 <p>
                   We offer our clients the extra peace of mind by offering a copy of the service attempts and/or service of process by sending the link via email. An extra fee applies to this service.
                 </p>
@@ -147,10 +205,68 @@
             </div>
           </div>
         </section>
+        <section class="p-4 md:p-8 lg:p-12 xl:p-16 bg-white">
+          <div class="container mx-auto">
+            <h4 class="text-xs mb-1 font-semibold text-red-700">Contact Section</h4>
+            <p class="text-2xl font-bold text-neutral-900">Lets Get In Touch!</p>
+            <p class="text-base">We Made Contact Easier for you to Find us and Talk to us!</p>
+            <div class="row mt-3">
+              <div class="col-12 mb-10">
+                <div id="map" style="width: 100%; height: 450px;"></div>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="bg-dcpn p-4 md:p-8 lg:p-12 xl:p-16 xl:py-12">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="flex items-center md:items-start mb-4 justify-start flex-col">
+          <h2 class="text-white text-xl font-bold">DALLAS CIVIL PROCESS
+            AND NOTARY</h2>
+          <p class="text-white font-medium text-xs">Specializing in CT Corporation Services.<br> The largest
+            Registered Agent Service Firm in the world.</p>
+          <div class="border-b-2 border-red-600 w-72 py-1"></div>
+          <img loading="lazy" alt="DCPN Logo Footer" src="./public/img/logo/dcpn-logo2-nobg.png" class="" width="90">
+        </div>
+        <div class="flex flex-row space-x-8">
+          <div class="px-4 break-words space-y-4 max-w-56 text-white">
+            <h4 class="font-bold text-lg text-zinc-400">Contacts</h4>
+            <p>970 Village Green Drive Allen, TX 75013</p>
+            <p>(469) 406-6807</p>
+          </div>
+          <div class="px-4 break-words space-y-4 max-w-56 text-white">
+            <h4 class="font-bold text-lg text-zinc-400">Accepted Payments</h4>
+            <p>Visa/MasterCard</p>
+            <p>Discover</p>
+            <p>American Express</p>
+            <p>Check</p>
+            <p>Paypal</p>
+          </div>
+          <div class="px-4 break-words space-y-4 max-w-56 text-wihte">
+            <h4 class="font-bold text-lg text-zinc-400">Membership</h4>
+            <img loading="lazy" alt="NAPPS logo" src="./public/img/logo/NAPPS.png" class="mx-auto mt-0" width="70" >
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-4">
+        <div class="flex flex-col items-center text-zinc-400">
+          <div class="border-b-2 border-neutral-500 w-80 mb-2"></div>
+          <p>© Copyright Dallas Civil Process & Notary. All rights reserved.</p>
+          <p>Powered by <a href="https://www.serve-now.com/" target="_blank">ServeNow</a></p>
+        </div>
+      </div>
     </footer>
+
+    <!-- ! SCRIPTS NEEDED FOR API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiVBHLjoJe2WIUZkwGlGY1GPf5aim17Jg&callback=initMap" async></script>
+
+    <script>
+      var map = L.map('map').setView([10.244149, 123.795020], 30);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+      L.marker([10.244149, 123.795020]).addTo(map)
+          .bindPopup('Our HQ Location').openPopup();
+    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
           const menuButton = document.getElementById('menu-button');
@@ -168,6 +284,5 @@
           });
         });
       </script>
-
 </body>
-</html>`
+</html>

@@ -3,6 +3,9 @@ module.exports = {
   content: ['./index.html', './**/*.{html,js}'],
   theme: {
     extend: {
+      spacing:{
+        '1/10': '10%',
+      },
       colors:{
         'dcpn': '#393737',
       },

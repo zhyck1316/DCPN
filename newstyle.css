@@ -2209,6 +2209,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -3071,8 +3076,8 @@ video {
     display: block;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:grid-cols-1 {
